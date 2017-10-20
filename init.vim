@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'junegunn/seoul256.vim'
+Plugin 'tpope/vim-surround'
 " Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
@@ -14,11 +15,9 @@ let g:gitgutter_max_signs=9999
 let g:gitgutter_realtime=0
 let g:gitgutter_eager=0
 
-let mapleader="\<SPACE>"
-
-let g:seoul256_background = 256
-colo seoul256
-set background=light
+"let g:seoul256_background = 256
+colo dracula
+"set background=light
 
 set showcmd
 set showmatch
@@ -67,7 +66,7 @@ set pastetoggle=<F2>
 set completeopt=menu,longest,preview
 set wildmode=list:longest
 set wildmenu
-set wildignore=*.swp,*.pyc,*.dll,*.exe
+set wildignore=*.swp,*.pyc,*.dll,*.exe,*.bak
 
 set gdefault
 
@@ -78,6 +77,7 @@ set t_Co=256
 " @y - copy to clipboard
 " @p - paste from clipboard
 
+nno , za
 nno <expr> zu "zz" . (winheight(0) / 4) . "<C-e>"
 nno <expr> zl "zz" . (winheight(0) / 4) . "<C-Y>"
 
