@@ -15,8 +15,10 @@ let g:gitgutter_max_signs=9999
 let g:gitgutter_realtime=0
 let g:gitgutter_eager=0
 
+nnoremap <leader><esc> :syntax sync fromstart<CR>
+
 "let g:seoul256_background = 256
-colo dracula
+colo soft-morning
 "set background=light
 
 set showcmd
@@ -56,7 +58,7 @@ endif
 set list
 
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-match ExtraWhitespace /\s\+$\|\t/
+match ExtraWhitespace /\s\+$/
 
 " set cursorline
 
