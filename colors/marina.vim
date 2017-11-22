@@ -91,7 +91,8 @@ exe 'hi pythonSelf guifg='s:warning
 exe 'hi pythonFunction guifg='s:func
 exe 'hi pythonExClass guifg='s:builtin
 exe 'hi pythonOperator guifg='s:warning2
-exe 'hi pythonDot guifg='s:warning2
+exe 'hi pythonFunctionParameters guifg='s:type
+exe 'hi pythonClassParameters guifg='s:func
 
 " Go Highlighting
 exe 'hi goBuiltins guifg='s:builtin

@@ -192,8 +192,13 @@ else
   syn keyword pythonStatement   as nonlocal None
   syn match   pythonStatement   "\<yield\s\+from\>" display
   syn keyword pythonBoolean     True False
-  syn match   pythonFunction    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
-  syn match   pythonClass       "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
+  syn match   pythonFunction    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" nextgroup=pythonFunctionVars display contained
+  syn region  pythonFunctionVars start="(" end=")" contained contains=pythonFunctionParameters transparent keepend
+  syn match   pythonFunctionParameters "[^\(\),]*" contained skipwhite
+
+  syn match   pythonClass       "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" nextgroup=pythonClassVars display contained
+  syn region  pythonClassVars start="(" end=")" contained contains=pythonClassParameters transparent keepend
+  syn match   pythonClassParameters "[^\(\),]*" contained skipwhite
   syn keyword pythonStatement   await
   syn match   pythonStatement   "\<async\s\+def\>" nextgroup=pythonFunction skipwhite
   syn match   pythonStatement   "\<async\s\+with\>" display
