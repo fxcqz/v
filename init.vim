@@ -7,12 +7,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'mhinz/vim-signify'
 call vundle#end()
 filetype plugin indent on
 
-"let g:gitgutter_max_signs=9999
-let g:gitgutter_realtime=0
-let g:gitgutter_eager=0
 let g:python_highlight_builtin_funcs=1
 let g:python_highlight_exceptions=1
 let g:python_highlight_string_format=1
