@@ -15,6 +15,8 @@ let g:gitgutter_realtime=0
 let g:gitgutter_eager=0
 let g:python_highlight_builtin_funcs=1
 let g:python_highlight_exceptions=1
+let g:python_highlight_string_format=1
+let g:python_highlight_string_formatting=1
 
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 

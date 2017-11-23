@@ -41,7 +41,7 @@ exe 'hi ColorColumn  guibg='s:bg2
 exe 'hi SignColumn guibg='s:bg2
 exe 'hi LineNr guifg='s:fg2' guibg='s:bg2 
 exe 'hi VertSplit guifg='s:fg3' guibg='s:bg3 
-exe 'hi MatchParen guifg='s:warning2'  gui=underline'
+exe 'hi MatchParen guibg='s:warning2' guifg='s:comment'  gui=bold'
 exe 'hi StatusLine guifg='s:fg2' guibg='s:bg3' gui=bold'
 exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
 exe 'hi PmenuSel  guibg='s:bg3 
