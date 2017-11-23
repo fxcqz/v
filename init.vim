@@ -11,6 +11,7 @@ Plugin 'mhinz/vim-signify'
 call vundle#end()
 filetype plugin indent on
 
+let g:signify_vcs_list = [ 'git' ]
 let g:python_highlight_builtin_funcs=1
 let g:python_highlight_exceptions=1
 let g:python_highlight_string_format=1

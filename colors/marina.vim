@@ -94,6 +94,11 @@ exe 'hi pythonOperator guifg='s:warning2
 exe 'hi pythonFunctionParameters guifg='s:type
 exe 'hi pythonClassParameters guifg='s:func
 
+
+exe 'hi SignifySignAdd gui=bold guifg='s:bg' guibg='s:str
+exe 'hi SignifySignDelete gui=bold guifg='s:bg' guibg='s:warning
+exe 'hi SignifySignChange gui=bold guifg='s:bg' guibg='s:builtin
+
 " Go Highlighting
 exe 'hi goBuiltins guifg='s:builtin
 
