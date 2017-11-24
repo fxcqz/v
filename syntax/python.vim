@@ -176,6 +176,8 @@ syntax match pythonOperator "\v\*"
 syntax match pythonOperator "\v/"
 syntax match pythonOperator "\v\+"
 syntax match pythonOperator "\v-"
+syntax match pythonOperator "\v\<"
+syntax match pythonOperator "\v\>"
 syntax match pythonOperator "\v\*\="
 syntax match pythonOperator "\v/\="
 syntax match pythonOperator "\v\+\="
@@ -184,6 +186,8 @@ syntax match pythonOperator "\v!\="
 syntax match pythonOperator "\v\|\="
 syntax match pythonOperator "\v\^\="
 syntax match pythonOperator "\v\&\="
+syntax match pythonOperator "\v\<\="
+syntax match pythonOperator "\v\>\="
 
 if s:Python2Syntax()
   if !s:Enabled("g:python_print_as_function")
