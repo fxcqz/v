@@ -438,16 +438,10 @@ endif
 "
 
 if s:Enabled("g:python_highlight_builtin_funcs")
-  if s:Python2Syntax()
-    syn keyword pythonBuiltinFunc	apply basestring buffer callable coerce
-    syn keyword pythonBuiltinFunc	execfile file help intern long raw_input
-    syn keyword pythonBuiltinFunc	reduce reload unichr unicode xrange
-    if s:Enabled("g:python_print_as_function")
-      syn keyword pythonBuiltinFunc	print
-    endif
-  else
-    syn keyword pythonBuiltinFunc	ascii exec memoryview print
-  endif
+  syn keyword pythonBuiltinFunc	ascii exec memoryview print
+  syn keyword pythonBuiltinFunc	apply basestring buffer callable coerce
+  syn keyword pythonBuiltinFunc	execfile file help intern long raw_input
+  syn keyword pythonBuiltinFunc	reduce reload unichr unicode xrange
   syn keyword pythonBuiltinFunc	__import__ abs all any
   syn keyword pythonBuiltinFunc	bin bool bytearray bytes
   syn keyword pythonBuiltinFunc	chr classmethod cmp compile complex
