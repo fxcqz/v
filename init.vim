@@ -92,6 +92,7 @@ function PyGetClass()
 endfunction
 
 nno <F3> :set hlsearch!<CR>
+nno <F5> :tabnext<CR>
 
 nno <F6> :call GitSession('save')<CR>
 nno <F8> :call GitSession('load')<CR>
