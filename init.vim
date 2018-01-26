@@ -5,19 +5,21 @@ set rtp+=$HOME/AppData/Local/nvim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'junegunn/seoul256.vim'
+"Plugin 'junegunn/seoul256.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-signify'
 call vundle#end()
 filetype plugin indent on
 
-let g:signify_vcs_list = [ 'git' ]
+"let g:signify_vcs_list = [ 'git' ]
 let g:python_highlight_builtin_funcs=1
 let g:python_highlight_exceptions=1
 let g:python_highlight_string_format=1
 let g:python_highlight_string_formatting=1
 
 nnoremap <leader><esc> :syntax sync fromstart<CR>
+
+so $VIMRUNTIME/mswin.vim
 
 "let g:seoul256_background = 256
 colo marina
