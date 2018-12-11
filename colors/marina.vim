@@ -57,10 +57,10 @@ exe 'hi Comment guifg='s:comment
 exe 'hi Conditional guifg='s:keyword  
 exe 'hi Constant guifg='s:const  
 exe 'hi Define guifg='s:keyword  
-exe 'hi DiffAdd guifg=#f8f8f8 guibg=#46830c gui=bold'
-exe 'hi DiffDelete guifg=#f8f8f8  guibg=#ff0000'
-exe 'hi DiffChange guifg=#f8f8f8 guibg=Blue'
-exe 'hi DiffText guifg=#f8f8f8 guibg=#080808 gui=bold'
+exe 'hi DiffAdd guifg=#111111 guibg='s:str' gui=bold'
+exe 'hi DiffDelete guifg=#111111  guibg='s:warning
+exe 'hi DiffChange guifg='s:fg' guibg='s:bg
+exe 'hi DiffText guifg=#111111 guibg=#9393ea gui=bold'
 exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
 exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2 
 exe 'hi Float guifg='s:const  

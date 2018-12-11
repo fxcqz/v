@@ -8,6 +8,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 "Plugin 'junegunn/seoul256.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-signify'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
 
@@ -19,7 +20,7 @@ let g:python_highlight_string_formatting=1
 
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 
-so $VIMRUNTIME/mswin.vim
+" so $VIMRUNTIME/mswin.vim
 
 "let g:seoul256_background = 256
 colo marina
@@ -62,6 +63,8 @@ set list
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 match ExtraWhitespace /\s\+$/
 
+let g:indentLine_color_gui = '#a7adba'
+
 " set cursorline
 
 set mouse=a
@@ -77,11 +80,11 @@ set gdefault
 syntax on
 set t_Co=256
 
-" macros:
-" @y - copy to clipboard
-" @p - paste from clipboard
-
+" zR - unfold all
+" zv - unfold at cursor
+" za - unfold top level of fold
 nno , za
+
 nno <expr> zu "zz" . (winheight(0) / 4) . "<C-e>"
 nno <expr> zl "zz" . (winheight(0) / 4) . "<C-Y>"
 
@@ -112,7 +115,12 @@ nno <F4> :FZF<CR>
 nno gv <C-v> :vsp<CR>:FZF<CR> <C-w>=
 nno gs <C-v> :sp<CR>:FZF<CR> <C-w>=
 
+" yamlize line (aka add a - and wrap in quotes)
+nno gy :s/\(^\s*\)\@<=\(.*\)/- "\2"/
+
 nno <C-b> :! git blame %<CR>
+
+nno ; :
 
 set statusline=%f
 set statusline+=\ %h%m%r%#warningmsg#
